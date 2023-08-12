@@ -1,4 +1,4 @@
-import 'package:fip/feature/on_boarding/presentation/data/models/on_boarding_model.dart';
+import 'package:fip/feature/on_boarding/data/models/on_boarding_model.dart';
 import 'package:fip/feature/on_boarding/presentation/views/widgets/on_boarding_item.dart';
 import 'package:flutter/material.dart';
 
