@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 void main() {
   runApp(const FIP());
 }
-
+// auth refactor
 class FIP extends StatelessWidget {
   const FIP({Key? key}) : super(key: key);
 
