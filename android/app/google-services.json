@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "425895351885",
+    "project_id": "iti-project-training",
+    "storage_bucket": "iti-project-training.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:425895351885:android:f7c0c66062d8b973d1ae04",
+        "android_client_info": {
+          "package_name": "com.example.fip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "425895351885-uuq9ikime1r67flbf4g9l93sqbj05t30.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxwl2R3b75vKstGCssbD4BRJdGnX6bTHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "425895351885-uuq9ikime1r67flbf4g9l93sqbj05t30.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "425895351885-b02g2u7v8qt67imdf4vad3entdeqmahh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.iti.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:425895351885:android:9be71834cfa56667d1ae04",
+        "android_client_info": {
+          "package_name": "com.example.iti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "425895351885-uuq9ikime1r67flbf4g9l93sqbj05t30.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxwl2R3b75vKstGCssbD4BRJdGnX6bTHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "425895351885-uuq9ikime1r67flbf4g9l93sqbj05t30.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "425895351885-b02g2u7v8qt67imdf4vad3entdeqmahh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.iti.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
