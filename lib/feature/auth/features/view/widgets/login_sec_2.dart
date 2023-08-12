@@ -4,6 +4,7 @@ import '../../../../../core/widgets/component/d_material_button.dart';
 import '../../../../../core/widgets/component/d_text_button.dart';
 import '../../../../../core/widgets/component/d_text_form_field.dart';
 import '../../../../../core/widgets/component/navigation.dart';
+import '../../../../layout/layout.dart';
 import '../../manger/auth_cubit.dart';
 import '../register_screen.dart';
 
@@ -63,6 +64,7 @@ class LoginSec2 extends StatelessWidget {
                   // cubit.userLogin(
                   //     email: emailController.text,
                   //     password: passController.text);
+                  navigateTo(context,const LayoutScreen());
                 }
               }),
           fallback: (context) =>
