@@ -1,4 +1,6 @@
 import 'package:fip/constants.dart';
+import 'package:fip/core/widgets/component/navigation.dart';
+import 'package:fip/feature/auth/features/view/login_screen.dart';
 import 'package:fip/feature/on_boarding/data/models/on_boarding_model.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -30,6 +32,7 @@ class SmoothPageIndicatorSection extends StatelessWidget {
           elevation: 0,
           onPressed: () {
             if (isLast) {
+              navigateTo(context,const LoginScreen());
             } else {
               pageController.nextPage(
                 duration: const Duration(
