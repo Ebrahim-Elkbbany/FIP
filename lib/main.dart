@@ -32,7 +32,7 @@ class FIP extends StatelessWidget {
     return  MultiBlocProvider(
       providers: [BlocProvider(create: (context) => LayoutCubit()..getUserData(),)],
       child: MaterialApp(
-        theme: lightThem,
+        theme: lightTheme,
         debugShowCheckedModeBanner: false,
         home: uid!=null?const LayoutScreen():const OnBoardingView(),
       ),
