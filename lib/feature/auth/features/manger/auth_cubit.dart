@@ -46,13 +46,13 @@ class AuthCubit extends Cubit<AuthState> {
     });
   }
 
-  void createUser({
+  Future<void> createUser({
     String? email,
     String? password,
     String? uid,
     String? phone,
     String? name,
-  }) {
+  }) async {
     UserModel model = UserModel(
       name: name,
       email: email,
@@ -65,7 +65,7 @@ class AuthCubit extends Cubit<AuthState> {
       photoCover:
       'https://st2.depositphotos.com/2550635/9440/i/450/depositphotos_94407988-stock-photo-silhouette-of-person-in-sportswear.jpg',
     );
-    FirebaseFirestore.instance
+   await FirebaseFirestore.instance
         .collection('users')
         .doc(uid)
         .set(model.toMap())
@@ -73,6 +73,7 @@ class AuthCubit extends Cubit<AuthState> {
       emit(RegisterSuccess(uid!));
     }).catchError((error) {
       emit(RegisterError(error.toString()));
+      print(error);
     });
   }
 
@@ -80,12 +81,12 @@ class AuthCubit extends Cubit<AuthState> {
 
 // Start Login
 
-  void userLogin({
+  Future<void> userLogin({
     String? email,
     String? password,
-  }) {
+  }) async {
     emit(LoginLoading());
-    FirebaseAuth.instance.signInWithEmailAndPassword(
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: email!, password: password!).then((value){
           emit(LoginSuccess(value.user!.uid));
     }).catchError((e){
