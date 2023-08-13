@@ -5,7 +5,6 @@ import 'package:fip/feature/home/presentation/view/home_screen.dart';
 import 'package:fip/feature/profile/presentation/view/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../../core/utils/constant.dart';
 part 'layout_state.dart';
 
