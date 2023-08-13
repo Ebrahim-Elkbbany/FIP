@@ -1,4 +1,4 @@
-import 'package:fip/constants.dart';
+import 'package:fip/core/utils/constant.dart';
 import 'package:fip/core/widgets/component/navigation.dart';
 import 'package:fip/feature/auth/features/view/login_screen.dart';
 import 'package:fip/feature/on_boarding/data/models/on_boarding_model.dart';
