@@ -1,3 +1,4 @@
+import 'package:fip/core/utils/shared_preferences.dart';
 import 'package:fip/core/widgets/component/navigation.dart';
 import 'package:fip/core/widgets/custom_button.dart';
 import 'package:fip/core/widgets/custom_text_form_field.dart';
@@ -84,11 +85,13 @@ class ProfileViewBody extends StatelessWidget {
                     CustomButton(
                       buttonName: 'LogOut'.toUpperCase(),
                       onTap: () {
-                        navigateAndFinish(context, const LoginScreen());
+                        SharedPreference.removeData(key: 'uid').then((value) {
+                          navigateAndFinish(context, const LoginScreen());
+                          LayoutCubit
+                              .get(context)
+                              .currentIndex = 0;
+                        });
 
-                        LayoutCubit
-                            .get(context)
-                            .currentIndex = 0;
                       },
                     ),
                     const SizedBox(
