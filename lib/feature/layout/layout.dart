@@ -21,11 +21,11 @@ class LayoutScreen extends StatelessWidget {
               },
               items: const [
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.home_sharp,), label: ''),
+                    icon: Icon(Icons.home_sharp,), label: 'Home'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.category_rounded,), label: ''),
+                    icon: Icon(Icons.category_rounded,), label: 'Category'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.person,), label: ''),
+                    icon: Icon(Icons.person,), label: 'Profile'),
 
               ],
             ),

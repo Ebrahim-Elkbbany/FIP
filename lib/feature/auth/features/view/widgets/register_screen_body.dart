@@ -1,4 +1,6 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
+import 'package:fip/core/widgets/component/navigation.dart';
+import 'package:fip/feature/layout/layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/utils/constant.dart';
@@ -26,7 +28,7 @@ class RegisterScreenBody extends StatelessWidget {
           if (state is RegisterSuccess) {
             SharedPreference.setData(key: 'uid', value: state.uid).then((value) {
               uid=state.uid;
-              // navigateAndFinish(context, const LayoutScreen());
+              navigateAndFinish(context, const LayoutScreen());
             });
             showToast(state:ToastStates.success ,message:'success register operation' );
           }
@@ -63,12 +65,12 @@ class RegisterScreenBody extends StatelessWidget {
                               text: 'register',
                               function: () {
                                 if (formKey.currentState!.validate()) {
-                                  // cubit.userRegister(
-                                  //   name: nameController.text,
-                                  //   phone: phoneController.text,
-                                  //   password: passController.text,
-                                  //   email: emailController.text,
-                                  // );
+                                  cubit.userRegister(
+                                    name: nameController.text,
+                                    phone: phoneController.text,
+                                    password: passController.text,
+                                    email: emailController.text,
+                                  );
                                 }
                               }),
                           fallback: (context) =>
