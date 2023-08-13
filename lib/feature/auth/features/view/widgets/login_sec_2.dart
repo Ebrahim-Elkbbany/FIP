@@ -46,8 +46,8 @@ class LoginSec2 extends StatelessWidget {
           },
           onSubmitted: (value) {
             if (formKey.currentState!.validate()) {
-              // cubit.userLogin(
-              //     email: emailController.text, password: passController.text);
+              cubit.userLogin(
+                  email: emailController.text, password: passController.text);
             }
           },
         ),
@@ -61,10 +61,10 @@ class LoginSec2 extends StatelessWidget {
               width: double.infinity,
               function: () {
                 if (formKey.currentState!.validate()) {
-                  // cubit.userLogin(
-                  //     email: emailController.text,
-                  //     password: passController.text);
-                  navigateTo(context,const LayoutScreen());
+                  cubit.userLogin(
+                      email: emailController.text,
+                      password: passController.text);
+
                 }
               }),
           fallback: (context) =>

@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/utils/constant.dart';
 import '../../../../../core/utils/shared_preferences.dart';
 import '../../../../../core/widgets/component/d_material_button.dart';
-import '../../../../../core/widgets/component/navigation.dart';
 import '../../../../../core/widgets/component/toast.dart';
 import '../../manger/auth_cubit.dart';
 import 'register_sec_1.dart';

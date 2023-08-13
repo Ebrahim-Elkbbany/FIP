@@ -1,3 +1,6 @@
+import 'package:fip/core/widgets/component/navigation.dart';
+import 'package:fip/feature/layout/layout.dart';
+import 'package:fip/feature/layout/manger/layout_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/utils/constant.dart';
@@ -23,9 +26,9 @@ class LoginScreenBody extends StatelessWidget {
             SharedPreference.setData(key: 'uid', value: state.uid)
                 .then((value) {
               uid = state.uid;
-              // LayoutCubit.get(context)..getUserData()..getPosts();
+              LayoutCubit.get(context).getUserData();
 
-              // navigateTo(context, const LayoutScreen());
+              navigateTo(context, const LayoutScreen());
             });
             showToast(
                 state: ToastStates.success, message: 'success Login operation');

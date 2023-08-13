@@ -1,4 +1,4 @@
-import 'package:fip/constants.dart';
+import 'package:fip/core/utils/constant.dart';
 import 'package:flutter/material.dart';
 
 
