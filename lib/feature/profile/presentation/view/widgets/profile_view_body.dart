@@ -18,7 +18,10 @@ class ProfileViewBody extends StatelessWidget {
     return Center(
       child: BlocBuilder<LayoutCubit, LayoutState>(
         builder: (context, state) {
-
+          var cubit=LayoutCubit.get(context);
+          emailController.text=cubit.userModel!.email!;
+          nameController.text=cubit.userModel!.name!;
+          phoneController.text=cubit.userModel!.phone!;
           return SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Padding(
