@@ -59,12 +59,11 @@ class LoginSec2 extends StatelessWidget {
           builder: (context) => DMaterialButton(
               text: 'LOGIN',
               width: double.infinity,
-              function: () async{
+              function: () {
                 if (formKey.currentState!.validate()) {
-                 await cubit.userLogin(
+                  cubit.userLogin(
                       email: emailController.text,
                       password: passController.text);
-                  navigateTo(context,  LayoutScreen());
                 }
               }),
           fallback: (context) =>

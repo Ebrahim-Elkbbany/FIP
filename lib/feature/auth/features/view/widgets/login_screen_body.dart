@@ -27,7 +27,6 @@ class LoginScreenBody extends StatelessWidget {
                 .then((value) {
               uid = state.uid;
               LayoutCubit.get(context).getUserData();
-
               navigateTo(context, const LayoutScreen());
             });
             showToast(
