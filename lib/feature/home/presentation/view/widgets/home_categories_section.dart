@@ -1,10 +1,13 @@
 import 'package:fip/feature/home/presentation/view/widgets/home_categories_list_view_item.dart';
+import 'package:fip/feature/layout/manger/layout_cubit.dart';
 import 'package:flutter/material.dart';
+
 
 class HomeCategoriesSection extends StatelessWidget {
   const HomeCategoriesSection({
-    super.key,
+    super.key, required this.cubit,
   });
+  final LayoutCubit cubit;
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +25,11 @@ class HomeCategoriesSection extends StatelessWidget {
             child: ListView.separated(
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
-              itemCount: 10,
+              itemCount: cubit.category.length,
               separatorBuilder: (context, index) =>
               const SizedBox(width: 15),
               itemBuilder: (context, index) =>
-              const CategoriesListViewItem(),
+               CategoriesListViewItem(cubit: cubit,index:index),
             ),
           ),
           const SizedBox(height: 20),

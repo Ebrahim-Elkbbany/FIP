@@ -1,31 +1,53 @@
+import 'package:fip/feature/layout/manger/layout_cubit.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesListViewItem extends StatelessWidget {
-  const CategoriesListViewItem({Key? key}) : super(key: key);
+  const CategoriesListViewItem(
+      {Key? key, required this.index, required this.cubit})
+      : super(key: key);
+  final int index;
+  final LayoutCubit cubit;
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding: const EdgeInsets.all(20),
-      child: Row(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 25),
+      child: Column(
         children: [
-          Image.asset(
-            'assets/images/Rectangle_31.png',
-            height: 80,
-            width: 80,
-            fit: BoxFit.cover,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Image.network(
+                cubit.product[index].image!,
+                height: 100,
+                width: 100,
+                fit: BoxFit.cover,
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              Column(
+                children: [
+                  Text(
+                    cubit.product[index].name!,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    cubit.product[index].price!,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w400, fontSize: 16),
+                  ),
+                ],
+              ),
+            ],
           ),
-          const SizedBox(
-            width: 20,
+          Divider(
+            color: Colors.grey[300],
           ),
-          const Text(
-            'Man',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-          ),
-          const Spacer(),
-          const Icon(
-            Icons.arrow_forward_ios_outlined,
-          )
         ],
       ),
     );
