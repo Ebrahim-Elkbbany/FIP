@@ -49,7 +49,7 @@ class LayoutCubit extends Cubit<LayoutState> {
 
    }
   }
-  //kk
+
   List<ProductModel>product=[];
   Future<void>getProduct()async{
     emit(GetProductLoading());
