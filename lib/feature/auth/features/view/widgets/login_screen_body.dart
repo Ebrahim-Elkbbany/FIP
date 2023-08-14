@@ -26,7 +26,7 @@ class LoginScreenBody extends StatelessWidget {
             SharedPreference.setData(key: 'uid', value: state.uid)
                 .then((value) {
               uid = state.uid;
-              LayoutCubit.get(context).getUserData();
+              LayoutCubit.get(context)..getUserData()..getCategory()..getProduct();
               navigateTo(context, const LayoutScreen());
             });
             showToast(

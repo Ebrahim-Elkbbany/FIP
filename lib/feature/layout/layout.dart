@@ -11,6 +11,9 @@ class LayoutScreen extends StatelessWidget {
       builder: (context, state) {
         var cubit=LayoutCubit.get(context);
         return Scaffold(
+          appBar: AppBar(
+            title: Text(cubit.titles[cubit.currentIndex]),
+          ),
           body: cubit.bottomScreen[cubit.currentIndex],
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: cubit.currentIndex,

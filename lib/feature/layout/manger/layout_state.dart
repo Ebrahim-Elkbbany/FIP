@@ -11,3 +11,11 @@ class GetUserDataError extends LayoutState {
   final String error;
   GetUserDataError(this.error);
 }
+
+class GetCategoryLoading extends LayoutState {}
+class GetCategorySuccess extends LayoutState {}
+class GetCategoryError extends LayoutState {}
+
+class GetProductLoading extends LayoutState {}
+class GetProductSuccess extends LayoutState {}
+class GetProductError extends LayoutState {}

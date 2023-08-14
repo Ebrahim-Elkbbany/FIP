@@ -12,7 +12,7 @@ ThemeData lightTheme= ThemeData(
     ),
     backgroundColor: Colors.white,
     elevation: 0,
-    toolbarHeight: 60,
+    // toolbarHeight: 60,
     titleTextStyle: TextStyle(
       color: Colors.black,
       fontSize: 20,

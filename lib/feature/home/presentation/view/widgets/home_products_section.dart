@@ -3,10 +3,13 @@
 import 'package:fip/feature/home/presentation/view/widgets/home_products_grid_view_item.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../layout/manger/layout_cubit.dart';
+
 class HomeProductsSection extends StatelessWidget {
   const HomeProductsSection({
-    super.key,
+    super.key, required this.cubit,
   });
+  final LayoutCubit cubit;
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +25,8 @@ class HomeProductsSection extends StatelessWidget {
           childAspectRatio: 1 / 1.6,
           crossAxisSpacing: 1,
         ),
-        itemCount: 10,
-        itemBuilder: (context, index) => const HomeProductsGridViewItem(),
+        itemCount: cubit.product.length,
+        itemBuilder: (context, index) =>  HomeProductsGridViewItem(cubit: cubit,index:index),
       ),
       // child: GridView.count(
       //   shrinkWrap: true,
