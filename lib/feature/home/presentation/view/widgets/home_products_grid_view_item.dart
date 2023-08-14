@@ -11,7 +11,7 @@ class HomeProductsGridViewItem extends StatelessWidget {
       height: 200,
       color: Colors.white,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.network(
             cubit.product[index].image!,
@@ -19,23 +19,17 @@ class HomeProductsGridViewItem extends StatelessWidget {
             height: 200,
           ),
           const SizedBox(height: 10,),
-          Padding(
-           padding: const EdgeInsets.symmetric(horizontal: 10.0),
-           child: Row(
-             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-             children: [
-             Text(
-               cubit.product[index].name!,
-               style:const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-             ),
-             const SizedBox(height: 10,),
-             Text(
-               cubit.product[index].price!,
-               style:const TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
-             ),
-           ],),
-         ),
-        ],
+          Text(
+            cubit.product[index].name!,
+            style:const TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
+            overflow: TextOverflow.ellipsis,
+          ),
+          const SizedBox(height: 10,),
+          Text(
+            cubit.product[index].price!,
+            overflow: TextOverflow.ellipsis,
+            style:const TextStyle(fontWeight: FontWeight.w400, fontSize: 16),
+          ),        ],
       ),
     );
   }

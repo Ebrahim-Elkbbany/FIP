@@ -21,7 +21,7 @@ class LayoutCubit extends Cubit<LayoutState> {
     emit(ChangeBottomScreen());
   }
   List<Widget>bottomScreen=const [HomeScreen(),CategoriesView(),ProfileView()];
-  List<String>titles=const ['Main Services','Category','Profile'];
+  List<String>titles=const ['Main Services','Product','Profile'];
 
 
   UserModel? userModel;
@@ -39,7 +39,7 @@ class LayoutCubit extends Cubit<LayoutState> {
   Future<void>getCategory()async{
     emit(GetCategoryLoading());
    try{
-     var collRef=await FirebaseFirestore.instance.collection('mainProduct').get();
+     var collRef=await FirebaseFirestore.instance.collection('product').get();
      for (var element in collRef.docs) {
        category.add(ProductModel.fromJson(element.data()));
      }
@@ -54,7 +54,7 @@ class LayoutCubit extends Cubit<LayoutState> {
   Future<void>getProduct()async{
     emit(GetProductLoading());
    try{
-     var collRef=await FirebaseFirestore.instance.collection('product').get();
+     var collRef=await FirebaseFirestore.instance.collection('bookProduct').get();
      for (var element in collRef.docs) {
        product.add(ProductModel.fromJson(element.data()));
      }
