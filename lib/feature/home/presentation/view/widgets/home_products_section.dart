@@ -21,9 +21,9 @@ class HomeProductsSection extends StatelessWidget {
         physics: const NeverScrollableScrollPhysics(),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          mainAxisSpacing: 1,
-          childAspectRatio: 1 / 1.6,
-          crossAxisSpacing: 1,
+          mainAxisSpacing: 2,
+          childAspectRatio: 1 / 1.3,
+          crossAxisSpacing: 2,
         ),
         itemCount: cubit.product.length,
         itemBuilder: (context, index) =>  HomeProductsGridViewItem(cubit: cubit,index:index),

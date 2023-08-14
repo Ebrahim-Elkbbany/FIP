@@ -11,29 +11,45 @@ class CategoriesListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
-      child: Row(
-          children: [
-            Image.network(
-              cubit.category[index].image!,
-              height: 100,
-              width: 100,
-              fit: BoxFit.cover,
-            ),
-            const SizedBox(
-              width: 20,
-            ),
-            Text(
-              cubit.category[index].name!,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-            ),
-            const Spacer(),
-            const Icon(
-              Icons.arrow_forward_ios_outlined,
-            )
+      padding: const EdgeInsets.symmetric(horizontal: 25),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Image.network(
+                cubit.product[index].image!,
+                height: 100,
+                width: 100,
+                fit: BoxFit.cover,
+              ),
+              const SizedBox(
+                width: 20,
+              ),
+              Column(
+                children: [
+                  Text(
+                    cubit.product[index].name!,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    cubit.product[index].price!,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w400, fontSize: 16),
+                  ),
+                ],
+              ),
             ],
           ),
-
+          Divider(
+            color: Colors.grey[300],
+          ),
+        ],
+      ),
     );
   }
 }
