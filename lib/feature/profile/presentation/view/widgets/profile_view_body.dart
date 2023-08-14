@@ -84,7 +84,7 @@ class ProfileViewBody extends StatelessWidget {
                       },
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 25,
                     ),
                     CustomButton(
                       buttonName: 'LogOut'.toUpperCase(),
