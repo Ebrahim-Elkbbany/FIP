@@ -1,4 +1,5 @@
 import 'package:fip/core/utils/shared_preferences.dart';
+import 'package:fip/core/widgets/component/d_material_button.dart';
 import 'package:fip/core/widgets/component/navigation.dart';
 import 'package:fip/core/widgets/custom_button.dart';
 import 'package:fip/core/widgets/custom_text_form_field.dart';
@@ -6,6 +7,9 @@ import 'package:fip/feature/auth/features/view/login_screen.dart';
 import 'package:fip/feature/layout/manger/layout_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../profile_nav/info.dart';
+import '../../../../profile_nav/names.dart';
 
 class ProfileViewBody extends StatelessWidget {
   const ProfileViewBody({Key? key}) : super(key: key);
@@ -19,10 +23,10 @@ class ProfileViewBody extends StatelessWidget {
     return Center(
       child: BlocBuilder<LayoutCubit, LayoutState>(
         builder: (context, state) {
-          var cubit=LayoutCubit.get(context);
-          emailController.text=cubit.userModel!.email!;
-          nameController.text=cubit.userModel!.name!;
-          phoneController.text=cubit.userModel!.phone!;
+          var cubit = LayoutCubit.get(context);
+          emailController.text = cubit.userModel!.email!;
+          nameController.text = cubit.userModel!.name!;
+          phoneController.text = cubit.userModel!.phone!;
           return SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Padding(
@@ -87,15 +91,38 @@ class ProfileViewBody extends StatelessWidget {
                       onTap: () {
                         SharedPreference.removeData(key: 'uid').then((value) {
                           navigateAndFinish(context, const LoginScreen());
-                          LayoutCubit
-                              .get(context)
-                              .currentIndex = 0;
+                          LayoutCubit.get(context).currentIndex = 0;
                         });
-
                       },
                     ),
                     const SizedBox(
                       height: 20,
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: DMaterialButton(
+                            background: Colors.blueAccent,
+                            text: 'Info'.toUpperCase(),
+                            function: () {
+                              navigateTo(context,const Info());
+
+                            },
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 15,
+                        ),
+                        Expanded(
+                          child: DMaterialButton(
+                            background: Colors.blueAccent,
+                            text: 'Names'.toUpperCase(),
+                            function: () {
+                              navigateTo(context,const Names());
+                            },
+                          ),
+                        )
+                      ],
                     ),
                   ],
                 ),
