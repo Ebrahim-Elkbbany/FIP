@@ -21,7 +21,7 @@ class LayoutCubit extends Cubit<LayoutState> {
     emit(ChangeBottomScreen());
   }
   List<Widget>bottomScreen=const [HomeScreen(),CategoriesView(),ProfileView()];
-  List<String>titles=const ['Main Services','Product','Profile'];
+  List<String>titles=const ['Main Services','Category','Profile'];
 
 
   UserModel? userModel;
