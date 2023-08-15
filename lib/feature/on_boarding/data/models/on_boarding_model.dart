@@ -8,8 +8,8 @@ class OnBoardingModel {
   static List<OnBoardingModel> boarding = [
     OnBoardingModel(
       image: 'assets/images/undraw_Shopping_Bags_l5iq.png',
-      text: 'Easy Shopping',
-      subText: 'Our app is designed to make shopping easy and convenient for you.',
+      text: 'Books Shopping ',
+      subText: 'Our app is designed to provide all books',
     ),
     OnBoardingModel(
       image: 'assets/images/undraw_Mobile_payments_re_7udl.png',

@@ -63,4 +63,18 @@ class LayoutCubit extends Cubit<LayoutState> {
       emit(GetProductError());
     }
   }
+
+  List<ProductModel>banners=[];
+  Future<void>getBanners()async{
+    emit(GetBannersLoading());
+    try{
+      var collRef=await FirebaseFirestore.instance.collection('banners').get();
+      for (var element in collRef.docs) {
+        banners.add(ProductModel.fromJson(element.data()));
+      }
+      emit(GetBannersSuccess());
+    }catch(error){
+      emit(GetBannersError());
+    }
+  }
 }

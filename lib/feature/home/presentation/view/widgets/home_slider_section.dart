@@ -10,11 +10,13 @@ final LayoutCubit cubit;
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
-      items: [
-        Image.asset('assets/images/card_1.png'),
-        Image.asset('assets/images/card_1.png'),
-        Image.asset('assets/images/card_1.png'),
-      ],
+
+      items: cubit.banners.map(
+            (e) {
+          return Image.network(e.image!);
+        },
+      ).toList(),
+
       options: CarouselOptions(
         height: 250.0,
         initialPage: 0,
