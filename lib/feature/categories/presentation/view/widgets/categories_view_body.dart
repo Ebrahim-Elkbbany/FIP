@@ -17,6 +17,8 @@ class CategoriesViewBody extends StatelessWidget {
                 CategoriesListViewItem(cubit: cubit, index: index),
             separatorBuilder: (context, index) => const SizedBox(height: 15,),
             itemCount: cubit.product.length);
+
+      //gggff
       },
     );
   }
