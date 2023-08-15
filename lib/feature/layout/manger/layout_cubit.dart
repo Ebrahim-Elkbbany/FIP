@@ -77,4 +77,6 @@ class LayoutCubit extends Cubit<LayoutState> {
       emit(GetBannersError());
     }
   }
+
+
 }

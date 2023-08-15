@@ -19,7 +19,7 @@ class Info extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.w600, fontSize: 22),
               ),
               Text(
-                '"FIP BOOKLY"',
+                '"Home Services"',
                 style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
               ),
             ],
@@ -39,7 +39,7 @@ class Info extends StatelessWidget {
             'and contain from three screens the first is the main screen'
             ' which contain the  slider , horizontal and vertical list view. ',
             style: TextStyle(
-                fontWeight: FontWeight.w300, fontSize: 20, height: 1.5),
+                fontWeight: FontWeight.w300, fontSize: 18, height: 1.5),
           ),
           Text(
             'the second screen is the category screen which provide product to buy it'
@@ -47,14 +47,14 @@ class Info extends StatelessWidget {
                 ' it come from firebase fire store.'
             '',
             style: TextStyle(
-                fontWeight: FontWeight.w300, fontSize: 20, height: 1.5),
+                fontWeight: FontWeight.w300, fontSize: 18, height: 1.5),
           ),
           Text(
             'the third screen contain information '
                 'about user and he could logout or navigate '
                 'to see the info about app and the name of developer.',
             style: TextStyle(
-                fontWeight: FontWeight.w300, fontSize: 20, height: 1.5),
+                fontWeight: FontWeight.w300, fontSize: 18, height: 1.5),
           ),
         //  test
         ]),
