@@ -28,7 +28,7 @@ class LayoutCubit extends Cubit<LayoutState> {
   void getUserData() {
     emit(GetUserDataLoading());
     FirebaseFirestore.instance.collection('users').doc(uid).get().then((value) {
-       userModel = UserModel.fromJson(value.data()!);
+      userModel = UserModel.fromJson(value.data()!);
       emit(GetUserDataSuccess());
     }).catchError((error) {
       emit(GetUserDataError(error.toString()));
@@ -38,29 +38,29 @@ class LayoutCubit extends Cubit<LayoutState> {
   List<ProductModel>category=[];
   Future<void>getCategory()async{
     emit(GetCategoryLoading());
-   try{
-     var collRef=await FirebaseFirestore.instance.collection('product').get();
-     for (var element in collRef.docs) {
-       category.add(ProductModel.fromJson(element.data()));
-     }
-     emit(GetCategorySuccess());
-   }catch(error){
-     emit(GetCategoryError());
+    try{
+      var collRef=await FirebaseFirestore.instance.collection('product').get();
+      for (var element in collRef.docs) {
+        category.add(ProductModel.fromJson(element.data()));
+      }
+      emit(GetCategorySuccess());
+    }catch(error){
+      emit(GetCategoryError());
 
-   }
+    }
   }
-  //jj
+
   List<ProductModel>product=[];
   Future<void>getProduct()async{
     emit(GetProductLoading());
-   try{
-     var collRef=await FirebaseFirestore.instance.collection('bookProduct').get();
-     for (var element in collRef.docs) {
-       product.add(ProductModel.fromJson(element.data()));
-     }
-     emit(GetProductSuccess());
-   }catch(error){
-     emit(GetProductError());
-   }
+    try{
+      var collRef=await FirebaseFirestore.instance.collection('bookProduct').get();
+      for (var element in collRef.docs) {
+        product.add(ProductModel.fromJson(element.data()));
+      }
+      emit(GetProductSuccess());
+    }catch(error){
+      emit(GetProductError());
+    }
   }
 }

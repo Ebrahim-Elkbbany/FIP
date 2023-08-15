@@ -11,17 +11,13 @@ class CategoriesViewBody extends StatelessWidget {
       builder: (context, state) {
         var cubit=LayoutCubit.get(context);
         return ListView.separated(
-            padding: const EdgeInsetsDirectional.only(top: 40),
             physics: const BouncingScrollPhysics(),
             itemBuilder: (context, index) =>
                 CategoriesListViewItem(cubit: cubit, index: index),
-            separatorBuilder: (context, index) => const SizedBox(height: 15,),
+            separatorBuilder: (context, index) =>const Divider(thickness: 1),
             itemCount: cubit.product.length);
-
-      //gggff
       },
     );
   }
 
 }
-
