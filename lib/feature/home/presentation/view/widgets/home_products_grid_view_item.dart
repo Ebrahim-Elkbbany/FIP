@@ -11,6 +11,7 @@ class HomeProductsGridViewItem extends StatelessWidget {
       height: 200,
       color: Colors.white,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.network(
@@ -19,10 +20,13 @@ class HomeProductsGridViewItem extends StatelessWidget {
             height: 150,
           ),
           const SizedBox(height: 10,),
-          Text(
-            cubit.product[index].name!,
-            style:const TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
-            overflow: TextOverflow.ellipsis,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            child: Text(
+              cubit.product[index].name!,
+              style:const TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
+              overflow: TextOverflow.ellipsis,
+            ),
           ),
           const SizedBox(height: 10,),
           Text(

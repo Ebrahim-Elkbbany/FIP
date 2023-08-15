@@ -19,3 +19,6 @@ class GetCategoryError extends LayoutState {}
 class GetProductLoading extends LayoutState {}
 class GetProductSuccess extends LayoutState {}
 class GetProductError extends LayoutState {}
+class GetBannersLoading extends LayoutState {}
+class GetBannersSuccess extends LayoutState {}
+class GetBannersError extends LayoutState {}
