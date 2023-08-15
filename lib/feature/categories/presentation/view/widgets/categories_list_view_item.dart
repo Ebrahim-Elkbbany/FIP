@@ -27,7 +27,6 @@ class CategoriesListViewItem extends StatelessWidget {
                 width: 20,
               ),
               Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
                     cubit.product[index].name!,

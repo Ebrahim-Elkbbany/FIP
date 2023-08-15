@@ -34,7 +34,7 @@ class Info extends StatelessWidget {
           Text(
             '                           '
             ' this app provide'
-            ' some tools of home services'
+            ' some of good books'
             ' which you can buy it '
             'and contain from three screens the first is the main screen'
             ' which contain the  slider , horizontal and vertical list view. ',
