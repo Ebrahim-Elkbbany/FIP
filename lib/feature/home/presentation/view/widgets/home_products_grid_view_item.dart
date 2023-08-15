@@ -16,7 +16,7 @@ class HomeProductsGridViewItem extends StatelessWidget {
           Image.network(
             cubit.product[index].image!,
             width: double.infinity,
-            height: 200,
+            height: 150,
           ),
           const SizedBox(height: 10,),
           Text(
